@@ -56,7 +56,7 @@ def next_layout(n_clicks,n2):
     ctx = dash.callback_context
 
     if not ctx.triggered:
-        path = layout_screen1
+        return layout_screen1
     else:
         button_id = ctx.triggered[0]['prop_id'].split('.')[0]
         print(button_id)
@@ -66,10 +66,6 @@ def next_layout(n_clicks,n2):
             return layout_screen1
         else:
             return layout_screen1
-    return path
-
-
-
 
 app.layout = html.Div(children=[layout_screen1],id='layout')
 
